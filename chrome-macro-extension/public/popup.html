@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome Macro Extension</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div id="popup-container">
+        <h1>マクロ設定</h1>
+        <div class="form-group">
+            <label for="macro-key">マクロしたいキー:</label>
+            <select id="macro-key">
+                <option value="right">右</option>
+                <option value="left">左</option>
+                <option value="special">特殊キー</option>
+                <!-- 他のキーオプションを追加 -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="macro-interval">マクロ間隔:</label>
+            <input type="number" id="macro-interval" placeholder="ミニ秒">
+        </div>
+        <div class="form-group">
+            <label for="stop-condition">停止条件:</label>
+            <select id="stop-condition">
+                <option value="time">時間</option>
+                <option value="count">回数</option>
+                <option value="key">特定のキー</option>
+            </select>
+        </div>
+        <button id="start-button">開始</button>
+    </div>
+    <script src="../src/popup/Popup.tsx"></script>
+</body>
+</html>
